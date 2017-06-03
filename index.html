@@ -1,0 +1,27 @@
+<!--  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessible Map</title>
+    <link  href="v4.1.1-dist/ol.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="">
+
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    
+
+    <script src="v4.1.1-dist/ol.js"></script>
+    
+  </head>
+  <body>
+    <a class="skiplink" href="#map">Go to map</a>
+    <div id="map" class="map" tabindex="0"></div>
+    <button id="zoom-out">Zoom out</button>
+    <button id="zoom-in">Zoom in</button>
+    
+    <script src="js/map.js"></script>
+
+  </body>
+</html>
