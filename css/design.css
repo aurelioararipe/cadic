@@ -19,3 +19,9 @@ a.skiplink:focus {
 #map:focus {
   outline: #4A74A8 solid 0.15em;
 }
+
+.btn-group{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

@@ -1,27 +1,78 @@
 <!--  -->
 <!DOCTYPE html>
-<html>
+<html ng-app="projetocadic">
   <head>
-    <title>Accessible Map</title>
-    <link  href="v4.1.1-dist/ol.css" type="text/css" rel="stylesheet">
+    <title>Trabalho CADIC</title>
+    <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" href="">
+    <!-- frameworks STYLES -->
+    <link  href="css/lib/v4.1.1-dist/ol.css" type="text/css" rel="stylesheet"> <!-- OpenLayer -->
+    <link rel="stylesheet" type="text/css" href="css/lib/cssBootstrap/bootstrap.min.css"> <!-- Bootstrap -->
 
+    <!-- STYLES FILE -->
+    <link rel="stylesheet" type="text/css" href="css/design.css">
+    
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     
+    <!--
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    -->
     
+    <!-- frameworks -->
+    <script src="js/lib/jquery-3.2.1.js"></script> <!-- Ajax -->
+    <script src="js/lib/v4.1.1-dist/ol.js"></script> <!-- OpenLayer -->
+    <script src="js/lib/jsBootstrap/bootstrap.min.js"></script> <!-- Bootstrap -->
+    <script src="js/lib/angular.min.js"></script> <!-- Angular -->
 
-    <script src="v4.1.1-dist/ol.js"></script>
-    
+    <!-- scripts ANGULARJS -->
+    <script src="js/main.js"></script>
+
+	<script src="js/controllers/estados-controller.js"></script>
+
+	<script src="js/service/service.js"></script>
+
+
+
   </head>
   <body>
+
     <a class="skiplink" href="#map">Go to map</a>
+
+<!-- botão para pesquisar o estado -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Estado</button>
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Teste1</a></li>
+        <li><a href="#">Teste2</a></li>
+      </ul>
+    </div>
+
+    <!-- botão para pesquisar o município -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Município</button>
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">M1</a></li>
+        <li><a href="#">M2</a></li>
+      </ul>
+    </div>
+
     <div id="map" class="map" tabindex="0"></div>
+
     <button id="zoom-out">Zoom out</button>
-    <button id="zoom-in">Zoom in</button>
+    <button id="zoom-in">Zoom in</button>	
+    
     
     <script src="js/map.js"></script>
+    
+
+
+
 
   </body>
 </html>

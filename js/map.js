@@ -12,10 +12,12 @@ var map = new ol.Map({
     })
   }),
   view: new ol.View({
-    center: [0, 0],
-    zoom: 2
+    center: ol.proj.transform([-51.92528, -14.235004], 'EPSG:4326', 'EPSG:3857'), //função do frame que permite usar longitude e latitude. EPSG é como se fosse um sistema de coordenadas
+    zoom: 4
   })
 });
+
+// fim do layers
 
 document.getElementById('zoom-out').onclick = function() {
   var view = map.getView();
