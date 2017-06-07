@@ -1,6 +1,5 @@
-<!--  -->
 <!DOCTYPE html>
-<html ng-app="projetocadic">
+<html lang="pt-br" ng-app="projetocadic">
   <head>
     <title>Trabalho CADIC</title>
     <meta charset="utf-8">
@@ -14,11 +13,11 @@
     
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     
-    <!--
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
-    -->
     
-    <!-- frameworks -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    
+    
+    <!-- frameworks SCRIPTS-->
     <script src="js/lib/jquery-3.2.1.js"></script> <!-- Ajax -->
     <script src="js/lib/v4.1.1-dist/ol.js"></script> <!-- OpenLayer -->
     <script src="js/lib/jsBootstrap/bootstrap.min.js"></script> <!-- Bootstrap -->
@@ -26,53 +25,26 @@
 
     <!-- scripts ANGULARJS -->
     <script src="js/main.js"></script>
-
-	<script src="js/controllers/estados-controller.js"></script>
-
-	<script src="js/service/service.js"></script>
-
+  	<script src="js/controllers/estados-controller.js"></script>
+    <script src="js/controllers/municipios-controller.js"></script>
+    <script src="js/directives/minhas-diretivas.js"></script>
 
 
   </head>
   <body>
 
-    <a class="skiplink" href="#map">Go to map</a>
-
 <!-- botão para pesquisar o estado -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary">Estado</button>
-      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="#">Teste1</a></li>
-        <li><a href="#">Teste2</a></li>
-      </ul>
-    </div>
+    <div class="container">
+        <botao-estado ng-controller="EstadosController"></botao-estado>
+    
 
     <!-- botão para pesquisar o município -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary">Município</button>
-      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="#">M1</a></li>
-        <li><a href="#">M2</a></li>
-      </ul>
+        <botao-municipio ng-controller="MunicipiosController"></botao-municipio>
     </div>
 
-    <div id="map" class="map" tabindex="0"></div>
-
-    <button id="zoom-out">Zoom out</button>
-    <button id="zoom-in">Zoom in</button>	
-    
-    
+    <!--<a class="skiplink" href="#map">Go to map</a>-->
+    <div id="map" class="map" tabindex="0"></div>    
     <script src="js/map.js"></script>
-    
-
-
-
 
   </body>
 </html>

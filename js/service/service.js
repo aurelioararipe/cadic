@@ -18,7 +18,7 @@ angular.module('projetocadic').service('meusEstados', function($http){
 /*
 	var url = 'http://www.geonames.org/childrenJSON?geonameId=3469034';
 
-	//código victor
+	código victor
 	$http({
 		method: 'GET',
 		url: url
@@ -29,7 +29,7 @@ angular.module('projetocadic').service('meusEstados', function($http){
 		function error(){
 			console.log('error on the state request!');
 		}
-	);//fim código victor
+	); fim código victor
 
 
 */
@@ -54,7 +54,7 @@ angular.module('projetocadic').service('meusEstados', function($http){
 
 
 
-/* outro código de teste
+/* outro código de teste aluracar
 	$scope.receberEstados = function(){
 		$scope.state = $scope.geonames;
 		$http({
