@@ -6,26 +6,11 @@ angular.module('minhasDiretivas', [])
         ddo.restrict = "AE"; //tag ou elemento
 
         // lista de botões para seleção de um estado
-        ddo.template = '<select value="Estados" ng-model="mySelect" ng-change="showSelectValue(mySelect)">'
-						+   '<option ng-repeat="estado in estados">'
-						+		'{{estado.nome}}'
-						+	'</option>'
-						+'</select>'
-
-        /*'<div class="btn-group">'
-						+  '<button type="button" class="btn btn-primary">Estado</button>'
-						+  '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">'
-						+    '<span class="caret"></span>'
-						+  '</button>'
-						+  '<ul class="dropdown-menu" role="menu">'
-						+		'<li ng-repeat="estado in estados">'
-						+           '<a href="#">{{estado.nome}}</a>'
-						+        '</li>'
-						+  '</ul>'
-
-						+'</div>'*/
-	
-					
+        ddo.template = 		'<select class="btn btn-primary" ng-model="estadoSelect" ng-change="showSelectValueEstado(estadoSelect)">'
+							+	'<option ng-repeat="estado in estados">'
+							+		'{{estado.name}}'
+							+	'</option>'
+							+'</select>'				
 
         return ddo;
     })
@@ -36,27 +21,11 @@ angular.module('minhasDiretivas', [])
         ddo.restrict = "AE"; 
 
         // lista de botões para seleção de um municipio
-        ddo.template = '<select ng-model="mySelect" ng-change="showSelectValue(mySelect)">'
-						+   '<option ng-repeat="municipio in municipios">'
+        ddo.template = '<select class="btn btn-primary" ng-model="municipioSelect" ng-change="showSelectValueMunicipio(municipioSelect)">'
+						+   '<option ng-repeat="municipio in municipios | filter: showSelectValueEstado(estadoSelect).name">'
 						+		'{{municipio.nome}}'
 						+	'</option>'
 						+'</select>'
-
-
-        /*'<div class="btn-group">'
-						+  '<button type="button" class="btn btn-primary" >Municipio</button>'
-						+  '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">'
-						+    '<span class="caret"></span>'
-						+  '</button>'
-						+  '<ul class="dropdown-menu" role="menu">'
-						+		'<li ng-repeat="municipio in municipios | filter: estadoSelecionado()">'
-						+           '<a href="#">{{municipio.nome}}</a>'
-						+        '</li>'
-						+  '</ul>'
-
-						+'</div>'*/
-	
-					
 
         return ddo;
     });

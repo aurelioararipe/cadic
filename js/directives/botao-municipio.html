@@ -1,0 +1,5 @@
+<select class="btn btn-primary" ng-model="municipioSelect" ng-change="showSelectValueMunicipio(municipioSelect, showSelectValueEstado(estadoSelect))">
+	<option ng-repeat="municipio in municipios | filter: showSelectValueEstado(estadoSelect).nome">
+		{{municipio.nome}}
+	</option>
+</select>

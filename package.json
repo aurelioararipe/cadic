@@ -1,0 +1,21 @@
+{
+  "name": "cadic",
+  "version": "1.0.0",
+  "description": "trabalho para cadic",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aurelioararipe/cadic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aurelioararipe/cadic/issues"
+  },
+  "homepage": "https://github.com/aurelioararipe/cadic#readme"
+}

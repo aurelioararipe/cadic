@@ -25,25 +25,26 @@
 
     <!-- scripts ANGULARJS -->
     <script src="js/main.js"></script>
-  	<script src="js/controllers/estados-controller.js"></script>
-    <script src="js/controllers/municipios-controller.js"></script>
+  	<script src="js/controllers/em-controller.js"></script>
     <script src="js/directives/minhas-diretivas.js"></script>
+    <!-- <script src="http://tombatossals.github.io/angular-openlayers-directive/dist/angular-openlayers-directive.min.js"></script> -->
 
 
   </head>
   <body>
 
+    <div class="container" ng-controller="EMController">
+        
 <!-- botão para pesquisar o estado -->
-    <div class="container">
-        <botao-estado ng-controller="EstadosController"></botao-estado>
+        <botao-estado></botao-estado> <!-- diretiva para botão estado em "minhas diretivas" -->
     
 
     <!-- botão para pesquisar o município -->
-        <botao-municipio ng-controller="MunicipiosController"></botao-municipio>
+        <botao-municipio></botao-municipio> <!-- diretiva para botão municipios em "minhas diretivas" -->
     </div>
 
-    <!--<a class="skiplink" href="#map">Go to map</a>-->
     <div id="map" class="map" tabindex="0"></div>    
+    
     <script src="js/map.js"></script>
 
   </body>

@@ -1,11 +1,5 @@
-<div class="btn-group">
-	<button type="button" class="btn btn-primary">Estado</button>
-	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-		<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu" role="menu">
-		<li ng-repeat="estado in estados">
-	       <a href="#">{{estado.nome}}</a>
-	    </li>
-	</ul>
-</div>
+<select class="btn btn-primary" ng-model="estadoSelect" ng-change="showSelectValueEstado(estadoSelect)">
+	<option ng-repeat="estado in estados">
+        {{estado.nome}}
+    </option>
+</select>
